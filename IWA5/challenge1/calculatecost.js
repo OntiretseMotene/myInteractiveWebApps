@@ -15,6 +15,8 @@ let location2 = 'Nam';
 let location3 = 'NorKor';
 let location4 = 'other';
 
+
+
 // Define items
 
 let shoes = 300 * 1;
@@ -43,17 +45,23 @@ let shipping;
  * simplified the shipping calculations using if-else statements
 */
 
+if (location = 'location1') { shipping === 400 && currency === 'currency1'}
+if (location = 'location2') { shipping === 600 && currency ===  'currency2'}
+if (location = 'location4') { shipping === 800 && currency === 'currency2'}
+//else if (location = 'location3') { console.log(BANNED_WARNING)}
+
+
 if (location === 'location1' && (shoes + toys + shirts + batteries+ pens) >= 1000 && customers === 1 && currency === 'currency1') { 
     shipping === 0;
 } else {
-    shipping === 600;
+    shipping === 400;
 
 }
 
 if (location === 'location2' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency === 'currency2') {
     shipping === 0;
 } else {
-  shipping = 800
+  shipping = 600
 }
 
 /*shoes = 300 * 1
@@ -80,7 +88,7 @@ if (shipping === 0 && customers === 1) { console.log(FREE_WARNING);
 if (location = 'NorKor') { console.log(BANNED_WARNING);
 } else
 
-    console.log('Price:', currency, shoes + batteries + pens + shirts + shipping);
+    console.log('Price:', currency1, shoes + batteries + pens + shirts + shipping);
 
 /*customers = '1'
 const location = 'RSA'
