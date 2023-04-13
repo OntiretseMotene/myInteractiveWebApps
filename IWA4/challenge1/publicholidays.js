@@ -43,12 +43,12 @@ if (year = 2050) {
 	console.log(date, 'Day of Reconciliation');
 	count += 3;
 
-	console.log(month, 'Day of Goodwill');
-	let count = count + 1;
+	console.log(date, 'Day of Goodwill');
+	count += 1;
 
 	
 
-	if (status = "parent") {
+	if (status === "parent") {
 	  console.log(date, 'Christmas Day');
 	  count += 1;
   }
