@@ -52,29 +52,36 @@ let pens = 5 * NONE_SELECTED;
 
 
 if (location1 === 'RSA' && (shoes + toys + shirts + batteries+ pens) >= 1000 && customers === 1 && currency1 === 'R') { 
-    shippingFree === 0;
+    shippingFree = 0;
 } else {
     shipping1 === 400;
 
 }
 
 if (location2 == 'NAM' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency2 === '$') {
-    shippingFree == 0;
+    shippingFree = 0;
+
 } else {
+
   shipping2 = 600;
 }
 
 if (location !== 'RSA' && location !== 'NAM') {
-    shippingOther === 800;
+    shippingOther = 800;
 }
 
-if (shipping1 && shipping2 === 0 && customers === 1) { console.log(FREE_WARNING);
-} else
+if (shipping1 === 0 || shipping2 === 0 && customers === 1) { 
 
-if (location3 = 'NorKor') { console.log(BANNED_WARNING);
-} else
+    console.log(FREE_WARNING);
+
+} else if (location3 = 'NorKor') {
+
+     console.log(BANNED_WARNING);
+
+} else {
 
    console.log('Price:', currency1, shoes + toys + shirts + batteries + pens + shipping1);
+}
 
 /*shoes = 300 * 1
 toys - 100 * 5
