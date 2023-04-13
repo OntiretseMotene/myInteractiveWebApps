@@ -10,11 +10,16 @@ const NONE_SELECTED = 0;
 
 // Define variables
 
-let location = 'RSA';
+let location1 = 'RSA';
+let location2 = 'NAM';
 
-let currency = 'R';
+let currency1 = 'R';
+let currency2 = '$';
 
-let shipping = 400;
+let shipping1 = 400 ;
+let shipping2 = 600 ;
+let shippingFree = 0;
+let shippingOther
 
 let customers = 1;
 
@@ -45,30 +50,30 @@ let pens = 5 * NONE_SELECTED;
 //else if (location = 'location3') { console.log(BANNED_WARNING)}
 
 
-if (location === 'RSA' && (shoes + toys + shirts + batteries+ pens) >= 1000 && customers === 1 && currency === 'R') { 
-    shipping === 0;
+if (location1 === 'RSA' && (shoes + toys + shirts + batteries+ pens) >= 1000 && customers === 1 && currency1 === 'R') { 
+    shippingFree === 0;
 } else {
-    shipping === 400;
+    shipping1 === 400;
 
 }
 
-if (location == 'NAM' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency === '$') {
-    shipping == 0;
+if (location2 == 'NAM' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency2 === '$') {
+    shippingfree == 0;
 } else {
-  shipping = 600;
+  shipping2 = 600;
 }
 
 if (location !== 'RSA' && location !== 'NAM') {
-    shipping === 800;
+    shippingOther === 800;
 }
 
-if (shipping === 0 && customers === 1) { console.log(FREE_WARNING);
+if (shipping1 && shipping2 === 0 && customers === 1) { console.log(FREE_WARNING);
 } else
 
 if (location = 'NorKor') { console.log(BANNED_WARNING);
 } else
 
-   console.log('Price:', currency, shoes + toys + shirts + batteries + pens + shipping);
+   console.log('Price:', currency1, shoes + toys + shirts + batteries + pens + shipping1);
 
 /*shoes = 300 * 1
 toys - 100 * 5
