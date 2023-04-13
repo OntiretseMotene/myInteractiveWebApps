@@ -12,6 +12,7 @@ const NONE_SELECTED = 0;
 
 let location1 = 'RSA';
 let location2 = 'NAM';
+let location3 = 'NorKor'
 
 let currency1 = 'R';
 let currency2 = '$';
@@ -58,7 +59,7 @@ if (location1 === 'RSA' && (shoes + toys + shirts + batteries+ pens) >= 1000 && 
 }
 
 if (location2 == 'NAM' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency2 === '$') {
-    shippingfree == 0;
+    shippingFree == 0;
 } else {
   shipping2 = 600;
 }
@@ -70,7 +71,7 @@ if (location !== 'RSA' && location !== 'NAM') {
 if (shipping1 && shipping2 === 0 && customers === 1) { console.log(FREE_WARNING);
 } else
 
-if (location = 'NorKor') { console.log(BANNED_WARNING);
+if (location3 = 'NorKor') { console.log(BANNED_WARNING);
 } else
 
    console.log('Price:', currency1, shoes + toys + shirts + batteries + pens + shipping1);
