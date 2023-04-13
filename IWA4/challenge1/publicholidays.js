@@ -11,7 +11,7 @@ const year = '2050';
 const status = 'student' || 'parent';
 //const count = 0, 
 let count = 0;
-let date = '';
+let date = 'June' || 'December';
 
 if (year = 2050) {
 	console.log('January', 'New Year’s Day'); //closing bracket fixed
@@ -26,7 +26,7 @@ if (year = 2050) {
         console.log('June', 'Youth Day');
         count += 1;}
 
-    // The if statements use an assignment ('=') instead of a comparison ('===')
+    // The if statements use an assignment (stu'=') instead of a comparison ('===')
 
 	/* if (status = "student") {
 	  console.log('June', 'Youth Day')
