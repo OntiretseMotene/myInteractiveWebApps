@@ -8,19 +8,13 @@ const FREE_WARNING = 'Free shipping only appies to single costomer orders';
 const BANNED_WARNING = 'Unfortunately we do not ship to your country of residence';
 const NONE_SELECTED = 0;
 
-// Define locations
+// Define variables
 
 let location = 'RSA';
 
-// Define currency
+let currency = 'R';
 
-let currency = 'R'
-
-// Define shipping
-
-let shipping = 400
-
-// Define customers
+let shipping = 400;
 
 let customers = 1;
 
@@ -58,14 +52,14 @@ if (location === 'RSA' && (shoes + toys + shirts + batteries+ pens) >= 1000 && c
 
 }
 
-if (location === 'NAM' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency === '$') {
-    shipping === 0;
+if (location == 'NAM' && (shoes + toys + shirts + batteries+ pens) >= 60 && customers === 1 &&  currency === '$') {
+    shipping == 0;
 } else {
-  shipping = 600
+  shipping = 600;
 }
 
 if (location !== 'RSA' && location !== 'NAM') {
-    shipping ===800
+    shipping === 800;
 }
 
 if (shipping === 0 && customers === 1) { console.log(FREE_WARNING);
@@ -74,7 +68,8 @@ if (shipping === 0 && customers === 1) { console.log(FREE_WARNING);
 if (location = 'NorKor') { console.log(BANNED_WARNING);
 } else
 
-   console.log('Price:', currency, shoes + batteries + pens + shirts + shipping);
+   console.log('Price:', currency, shoes + toys + shirts + batteries + pens + shipping);
+
 /*shoes = 300 * 1
 toys - 100 * 5
 shirts = 150 * 'NONE_SELECTED'
@@ -83,15 +78,17 @@ pens = 5 * 'NONE_SELECTED'
 
 shipping = null
 currency = $
+*/
 
-if (shoes + batteries + pens + shirts > 1000 &&  ) {
+/*if (shoes + batteries + pens + shirts > 1000) {
 	if (location = NAM && customers < 2) {
 			if (location = RSA)
 		    shipping = 0 || calcShipping
 		}
 	}
-}
-*/
+    */
+
+
 
 
 
