@@ -19,7 +19,7 @@ let currency2 = '$';
 let shipping1 = 400 ;
 let shipping2 = 600 ;
 let shippingFree = 0;
-let shippingOther
+let shippingOther = 800;
 
 let customers = 1;
 
