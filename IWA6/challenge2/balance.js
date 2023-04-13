@@ -21,8 +21,8 @@ console.log(balance.toFixed(3))*/
 //The corrected code
 
 /* I fixed the syntax errors.
- * I changed "!== null" to "!== undefined" 
- * I changed the equality operator to a strict equality for 'hourofDay' and 'minuteofDay' from "== '00'" to "=== 0"
+ * I changed "!== null" to "!== undefined" because null is a non value and it must time must not be undefined/unknown.
+ * I changed the equality operator to a strict equality for 'hourofDay' and 'minuteofDay' from "== '00'" to "=== 0" to increase predictability of time.
  * I fixed the spelling error in 'starting' to 'StartingafterTax'
  * I formatted the final balance by adding the "R" currency and using the 'toFix(2) to round off to 2 decimal places
 */
@@ -34,3 +34,6 @@ if (hourOfDay !== undefined && minuteOfDay !== undefined && hourOfDay === 0 && m
 
     console.log(balance.toFixed(2))
 }
+
+//the balance output logs = R 274.05 on the console.
+
