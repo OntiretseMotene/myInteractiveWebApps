@@ -6,14 +6,14 @@
   
 
 //const date: 2050, the date variable should be assigned as a string
-const year = '2050';
+const year = 2050;
 //const status: 'student'
 const status = 'student' || 'parent';
 //const count = 0, 
 let count = 0;
 let date = 'June' || 'December';
 
-if (year = 2050) {
+if (year === 2050) {
 	console.log('January', 'New Year’s Day'); //closing bracket fixed
 	console.log('March', 'Human Rights Day');
 	date = 'April';
@@ -21,10 +21,12 @@ if (year = 2050) {
 	console.log(date, 'Freedom Day');
 	//let count = count + 4, instead, use the addition assignment
     count += 4;
+}
 
 	if (status === "student") {
         console.log('June', 'Youth Day');
-        count += 1;}
+        count += 1;
+	}
 
     // The if statements use an assignment (stu'=') instead of a comparison ('===')
 
@@ -54,7 +56,7 @@ if (year = 2050) {
   }
 
 	
-}
+
 
 //console.log('The year is:', date)
 

@@ -2,8 +2,9 @@
 
 <html>
 	<head>
-		<scripts scr="./scripts"></scripts> <!--Spelling error, scr should be src instead. The closing tag </scripts> is also missing-->
-		<scripts scr="./config.js"></scripts>
+		<!--<scripts scr="."/script.js></scripts> Spelling error, scr should be src instead. The closing tag </scripts> is also missing-->
+		<script  type="module" src="./script.js"></script>
+		<!--I added the type="module" attribute on the script tag that loads the JavaScript file-->
   </head>
 
 	<body>
@@ -12,5 +13,5 @@
 		
 	</body>
 
-	<footer>Loading...</footer> <!--The footer tag should be inside the body tag.-->
+	<footer>Loading...</footer> 
 </html>

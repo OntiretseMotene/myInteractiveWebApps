@@ -1,8 +1,8 @@
 // nwabisa.js
 
-private firstname = "Nwabisa" // Remove "private" and replace with "let"
-private surname = "Gabe"      // Remove "private" and replace with "let"
-public role = "CEO"           // Remove "public" and replace with "const"
+const firstname = "Nwabisa" // Remove "private" and replace with "const"
+const surname = "Gabe"      // Remove "private" and replace with "const"
+let role = "CEO"           // Remove "public" and replace with "let"
 
-private display= firstname + " " + surname + " (" + role + ")" // Replace "private" with "let"
+const display= firstname + " " + surname + " (" + role + ")" // Replace "private" with "const"
 document.querySelector('#nwabisa').innerText = display 

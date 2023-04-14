@@ -1,10 +1,10 @@
 // johannes.js
 
 // Replace the words "private" and "public" with "let" and "const" respectively
-private firstname = "Johannes"
-private surname = "Potgieter"
-public role = "Intern"
+const firstname = "Johannes"
+const surname = "Potgieter"
+let role = "Intern"
 
 // Replace the word "private" with "let"
-private display= firstname + " " + surname + " (" + role + ")"
+const display= firstname + " " + surname + " (" + role + ")"
 document.querySelector('#johannes').innerText = display

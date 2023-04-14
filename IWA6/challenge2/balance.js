@@ -16,7 +16,7 @@ const minuteOfDay = 00;
 	const balace = starting - transport - food - rent
 }
 	
-console.log(balance.toFixed(3))*/
+console.log(balance.toFixed(3))*/ 
 
 //The corrected code
 
@@ -27,6 +27,7 @@ console.log(balance.toFixed(3))*/
  * I formatted the final balance by adding the "R" currency and using the 'toFix(2) to round off to 2 decimal places
 */
 
+
 if (hourOfDay !== undefined && minuteOfDay !== undefined && hourOfDay === 0 && minuteOfDay === 0) {
     const taxAsDecimal = tax
     const startingAfterTax = salary * (1 - taxAsDecimal);
@@ -35,5 +36,5 @@ if (hourOfDay !== undefined && minuteOfDay !== undefined && hourOfDay === 0 && m
     console.log(balance.toFixed(2))
 }
 
-//the balance output logs = R 274.05 on the console.
+//The balance output logs = R 274.05 on the console.
 

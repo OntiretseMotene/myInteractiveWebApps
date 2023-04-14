@@ -1,10 +1,10 @@
-// scripts.js
+// script.js
 
-import {company} from './config.js' 
-import {year} from './config.js'
+import {company, year} from './config.js';
 
-const message = '© ' + company + ' (' + year + ')'
-document.querySelector('footer').innerText = message
+
+const message = '© ' + company + ' (' + year + ')';
+document.querySelector('footer').innerText = message;
 
 /* To import the constants in the config.js file to this file:
  * Change or insert curly brackets "{}" around the variable names "company and year"
