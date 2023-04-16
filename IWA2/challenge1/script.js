@@ -1,9 +1,9 @@
 // This is the firstname of the user
 
-var firstName = "John"
+const firstName = "John"
 
 // This is the lastname of the user
 
-var lastName = "Smith"
+const lastName = "Smith"
 
 console.log (firstName, lastName);

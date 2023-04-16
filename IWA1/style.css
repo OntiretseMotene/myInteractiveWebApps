@@ -6,8 +6,23 @@
     --color-light-grey: #d2d6dc; 
 }
 
+/*layout */
 
-* {
+html, body {
+    height:100%
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-medium-grey);
+    color: var(--color-white);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+/*
+ {
     box-sizing: border-box;
 }
 
