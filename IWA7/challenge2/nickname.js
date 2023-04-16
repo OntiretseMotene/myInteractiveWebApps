@@ -3,7 +3,7 @@ const firstName = "Timothy"; //camel casing
 
 //Add user
 
-const user = firstName || firstName || 
+const user = nickName || firstName
 
 
-console.log("Good Morning ${user}!")
+console.log('Good Morning ${user}!');
