@@ -17,8 +17,8 @@ const leo = `${leoName} ${leoSurname} Owed: R ${(-parseFloat(leoBalance)).toFixe
 //const sarah = "{leoName} + {surname} + \"Owed\" + \"R\" + {sarahBalance}";
 const sarah = `${sarahName} ${sarahSurname} Owed: R ${(-parseFloat (sarahBalance)).toFixed(2)}`;
 //const total = "Total amount owed: ";
-const total = `Total amount owed: R ${parseFloat(owed).toLocateString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+const total = `Total amount owed: R ${parseFloat(owed).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 //const result = leo + sarah + divider + divider + total + owed + divider
-const result = `\n${leo} \n${sarah}\n${divider}\n${total.padStart(44)}\n${dicider}`;
+const result = `\n${leo} \n${sarah}\n${divider}\n${total.padStart(44)}\n${divider}`;
 
-console.log(result)
+console.log(result);
