@@ -14,7 +14,7 @@ const sarahPostal = '0310'
 // Only change below this line
 
 // Changed all the assignments (=) into definitions (:) on all object properties.
-const leo = {                   // The leo const is an object
+const leo = {                   // The leo const is an object, therefore I used an assignment
 	name: leoName, 
 	balance: leoBalance,
 	accessId: '47afb389-8014-4d0b-aff3-e40203d2107f', //Use correct CamelCasing
@@ -26,7 +26,7 @@ const leo = {                   // The leo const is an object
 	}
 };
 
-const sarah = {                             //Add 
+const sarah = {                             //Add an assignment to the sarah const
 	name: sarahName + ' ' + sarahSurname,     // I used string interpolation to concatenante sarahName and sarahSurname
 	age: 62,
 	accessId: '6b279ae5-5657-4240-80e9-23f6b635f7a8',  //camelCasing
