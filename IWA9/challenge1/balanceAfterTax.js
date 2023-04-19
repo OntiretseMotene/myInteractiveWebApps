@@ -7,10 +7,12 @@ const size = 'large'
 
 // Only change the syntax below (not the values or key names)
 
-const expenses = {      //expenses object with food  and transport properties
+//expenses object with food  and transport properties
+const expenses = {      
     food: 51.7501,
     transport:  10.2,
-} //added the semicolon, semicolons are used to separate statements. 
+} 
+//added the semicolon, semicolons are used to separate statements. 
   
 const tax = {
     734: '3%',
@@ -37,7 +39,14 @@ const taxAsDecimal = parseFloat(tax[913] / 100);
 /** Calculate the tax rate as a decimal and 
  * added the parseFloat method tax value and calculate it as a decimal
  */
-const startingAfterTax = salary * (1 - taxAsDecimal); //Starting salary after tax is calculated here
-const type = `${lodging} ${size}`;  //I concatinated the variables to get the rental value
-const balance = (startingAfterTax - expenses.transport - expenses.food - rent['large-apartment']); // Create a new variable balance from items fetched from the expense object using .notation and the string valuable
-console.log(`R ${balance.toFixed(2)}`); // a numenric value will be logged. 
+
+//Starting salary after tax is calculated here
+const startingAfterTax = salary * (1 - taxAsDecimal); 
+
+//I concatinated the variables to get the rental value
+const type = `${lodging} ${size}`;  
+
+// Create a new variable balance from items fetched from the expense object using .notation and the string valuable
+const balance = (startingAfterTax - expenses.transport - expenses.food - rent['large-apartment']); 
+console.log(`R ${balance.toFixed(2)}`); 
+// a numenric value will be logged. 
