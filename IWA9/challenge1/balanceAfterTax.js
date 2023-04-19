@@ -40,4 +40,4 @@ const taxAsDecimal = parseFloat(tax[913] / 100);
 const startingAfterTax = salary * (1 - taxAsDecimal); //Starting salary after tax is calculated here
 const type = `${lodging} ${size}`;  //I concatinated the variables to get the rental value
 const balance = (startingAfterTax - expenses.transport - expenses.food - rent['large-apartment']); // Create a new variable balance from items fetched from the expense object using .notation and the string valuable
-console.log(`R ${balance}`); // a numenric value will be logged. 
+console.log(`R ${balance.toFixed(2)}`); // a numenric value will be logged. 
