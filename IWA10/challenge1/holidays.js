@@ -53,14 +53,21 @@ const futureId = 9
 
 // Do not change code above this comment
 
-console.log(holidays[futureId]?.name || 'ID {futureId} not created yet');
+//Line below checks if an item is assigned to key 9. I fixed the syntax error
 
-let copied = holidays.christmas;
-copied.name = 'X-mas Day';
-copied.date = new Date(`25 December ${currentYear}`)
-correctDate.hours = 0
-correctDate.minutes = 0
-isEarlier = copied.date < holidays[6].date
+//console.log(holidays.futureId.name || 'ID {futureId} not created yet')
+console.log(holidays[futureId].name || `ID ${futureId} not created yet`)
+
+//This is a copy of the christmas object, with properties update
+//let christmas = holidays[6];
+const copied = {christmas, name: X-mas
+copied = { name: 'X-mas', date: new Date(christmas.date)};
+//correctDate = copied.date
+//correctDate.hours = 0
+//correctDate.minutes = 0
+copied.date.setHours(0, 0, 0, 0);
+
+const isEarlier = copied.date.getTime() < holidays[6].date.getTime();
 console.log('New date is earlier:', isEarlier)
 if (isEarlier) copied.date = correctDate
 console.log('ID change:', holidays[christmas].id != copied.id || copied.id)
@@ -68,41 +75,36 @@ console.log('Name change:', holidays[christmas].name != copied.name || copied.na
 console.log('Date change:', holidays[christmas].date != copied.date || copied.date)
 
 const firstHolidayTimestamp = Math.min(
-    holidays[0].date.getTime(),
-    holidays[1].date.getTime(),
-    holidays[2].date.getTime(),
-    holidays[3].date.getTime(),
-    holidays[4].date.getTime(),
-    holidays[5].date.getTime(),
-    holidays[6].date.getTime(),
-    holidays[7].date.getTime(),
-    holidays[8].date.getTime(),
-    holidays[9]?.date.getTime(),
-);
+    holidays[0].date.getTime,
+    holidays[1].date.getTime,
+    holidays[2].date.getTime,
+    holidays[3].date.getTime,
+    holidays[4].date.getTime,
+    holidays[5].date.getTime,
+    holidays[6].date.getTime,
+    holidays[7].date.getTime,
+    holidays[8].date.getTime,
+)
 
 const lastHolidayTimestamp = Math.max(
-    holidays[0].date.getTime(),
-    holidays[1].date.getTime(),
-    holidays[2].date.getTime(),
-    holidays[3].date.getTime(),
-    holidays[4].date.getTime(),
-    holidays[5].date.getTime(),
-    holidays[6].date.getTime(),
-    holidays[7].date.getTime(),
-    holidays[8].date.getTime(),
-    holidays[9]?.date.getTime(),
-);
+    holidays[0].date.getTime,
+    holidays[1].date.getTime,
+    holidays[2].date.getTime,
+    holidays[3].date.getTime,
+    holidays[4].date.getTime,
+    holidays[5].date.getTime,
+    holidays[6].date.getTime,
+    holidays[7].date.getTime,
+    holidays[8].date.getTime,
+)
 
-const firstDate = new Date (firstHolidayTimestamp);
-const lastDate = new Date (lastHolidayTimestamp);
+const firstDay = firstHolidayTimestamp.getDate
+const firstMonth = firstHolidayTimestamp.getMonth
+const lastDay = lastHolidayTimestamp.getDate
+const lastMonth = lastHolidayTimestamp.getMonth
 
-/*const firstDay = firstHolidayTimestamp.getDate()
-const firstMonth = firstHolidayTimestamp.getMonth()
-const lastDay = lastHolidayTimestamp.getDate()
-const lastMonth = lastHolidayTimestamp.getMonth()*/
+console.log('{firstDay}/{firstMonth}/{currentYear}')
+console.log('{lastDay}/{lastMonth}/{currentYear}')
 
-console.log(`${firstDate.getDate()}/${firstDate.getMonth()}/${currentYear}`);
-console.log(`${lastDate.getDate()}/${lastDate.getMonth()}/${currentYear}`);
-
-const randomHoliday = holidays[Math.floor(Math.random() * Object.keys(holidays).length)];
-console.log(randomHoliday.date);
+const randomHoliday = holidays[Math.random]
+console.log(randomHoliday.date)
