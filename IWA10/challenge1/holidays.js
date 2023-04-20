@@ -60,19 +60,20 @@ console.log(holidays[futureId].name || `ID ${futureId} not created yet`)
 
 //This is a copy of the christmas object, with properties update
 //let christmas = holidays[6];
-const copied = {christmas, name: X-mas
-copied = { name: 'X-mas', date: new Date(christmas.date)};
-//correctDate = copied.date
+const copied = Object.assign({}, holidays[christmas]);
+copied.date = new Date (`25/12 ${currentYear}`); 
+if (isEarlier) copied.date = correctDate;
+const isEarlier = copied.date < holidays[6].date;
 //correctDate.hours = 0
 //correctDate.minutes = 0
 copied.date.setHours(0, 0, 0, 0);
 
-const isEarlier = copied.date.getTime() < holidays[6].date.getTime();
-console.log('New date is earlier:', isEarlier)
-if (isEarlier) copied.date = correctDate
-console.log('ID change:', holidays[christmas].id != copied.id || copied.id)
-console.log('Name change:', holidays[christmas].name != copied.name || copied.name)
-console.log('Date change:', holidays[christmas].date != copied.date || copied.date)
+
+console.log('New date is earlier:', isEarlier);
+//Console.log the changes 
+console.log('ID change:', holidays[christmas].id !== copied.id || copied.id)
+console.log('Name change:', holidays[christmas].name !== copied.name || copied.name)
+console.log('Date change:', holidays[christmas].date !== copied.date || copied.date)
 
 const firstHolidayTimestamp = Math.min(
     holidays[0].date.getTime,
@@ -98,13 +99,16 @@ const lastHolidayTimestamp = Math.max(
     holidays[8].date.getTime,
 )
 
-const firstDay = firstHolidayTimestamp.getDate
+/*const firstDay = firstHolidayTimestamp.getDate
 const firstMonth = firstHolidayTimestamp.getMonth
 const lastDay = lastHolidayTimestamp.getDate
-const lastMonth = lastHolidayTimestamp.getMonth
+const lastMonth = lastHolidayTimestamp.getMonth*/
 
-console.log('{firstDay}/{firstMonth}/{currentYear}')
-console.log('{lastDay}/{lastMonth}/{currentYear}')
+const firstDate = new Date (firstHolidayTimestamp);
+const lastDate = new Date (lastHolidayTimestamp);
+
+console.log(`${firstDate}/${currentYear}`);
+console.log(`${lastDate}/${currentYear}`);
 
 const randomHoliday = holidays[Math.random]
 console.log(randomHoliday.date)
