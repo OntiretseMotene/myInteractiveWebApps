@@ -65,16 +65,17 @@ correctDate.setMinutes(0);
 let isEarlier = copiedDate < holidays[6].date;
 
 if (isEarlier) {
-    copiedDate = correctDate
-};
+    copiedDate = correctDate;
+}
 
 console.log('New date is earlier:', isEarlier); 
 console.log('ID change:', copiedId && holidays[christmas].id !== copiedId);
-console.log('Name change:', holidays[6].name === copiedName ? false : copiedName)
-console.log('Date change:', holidays[6].date === copiedDate ? false : copiedDate)
+console.log('Name change:', holidays[6].name === copiedName ? false : copiedName);
+console.log('Date change:', holidays[6].date === copiedDate.toString() ? false : copiedDate.toString());
 
-copiedDate.toLocaleDateString(('en-GB'))
+console.log(copiedDate.toLocaleDateString('en-GB'));
 
+const holidayTimestaps = object.values(holidays).map(holiday => holiday.date.getTime());
 const firstHolidayTimestamp = Math.min(
     //holidays[0].date.getTime(),
     holidays[1].date.getTime(),
@@ -85,10 +86,10 @@ const firstHolidayTimestamp = Math.min(
     holidays[6].date.getTime(),
     holidays[7].date.getTime(),
     holidays[8].date.getTime(),
-)
+);
 
 const lastHolidayTimestamp = Math.max(
-    holidays[0].date.getTime(),
+    //holidays[0].date.getTime(),
     holidays[1].date.getTime(),
     holidays[2].date.getTime(),
     holidays[3].date.getTime(),
@@ -97,13 +98,13 @@ const lastHolidayTimestamp = Math.max(
     holidays[6].date.getTime(),
     holidays[7].date.getTime(),
     holidays[8].date.getTime(),
-)
+);
 
-const firstDay = newDate(firstHolidayTimestamp).getDate();
-const firstMonth = newDate(lastHolidayTimestamp).getMonth()+1;
+const firstDay = new Date(firstHolidayTimestamp).getDate();
+const firstMonth = new Date(lastHolidayTimestamp).getMonth()+1;
 
-const lastDay = newDate(lastHolidayTimestamp).getDate();
-const lastMonth = newDate(lastHolidayTimestamp).getMonth()+1;
+const lastDay = new Date(lastHolidayTimestamp).getDate();
+const lastMonth = new Date(lastHolidayTimestamp).getMonth()+1;
 
 console.log(`${"0"+firstDay}/${"0"+firstMonth}/${currentYear}`);
 console.log(`${lastDay}/${lastMonth}/${currentYear}`);
