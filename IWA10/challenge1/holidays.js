@@ -12,7 +12,7 @@ const holidays = {
     1: {
         id: 1,
         name: 'Workers Day',
-        date: new Date(`1 April ${currentYear}`),
+        date: new Date(`1 April ${currentYear}`), 
     },
     2: {
         id: 2,
@@ -64,7 +64,7 @@ console.log('')
 
 
 /**
- * A copied object and a version of a christmas is created. 
+ * A copied object and a new version of the christmas object is created. 
  * 
  * The date is set to a new date by modifying the hours and minutes to be set to midnight
  */
@@ -103,7 +103,7 @@ console.log(`Date Change: ${days}/${months}/${currentYear}`)
 
 /**
  * Gets the minimun date from the holidays object. 
- * The first date is converted to an integer as it was a string
+ * The first date is converted to an integer as it was a string using parseInt
  */
 const firstHolidayTimestamp = Math.min(
    parseInt (holidays[0].date),
@@ -119,7 +119,7 @@ const firstHolidayTimestamp = Math.min(
 
 /**
  * Gets the maximum date from the holidays object. 
- * The first date is converted to an integer as it was a string
+ * The first date is converted to an integer as it was a string using parseInt
  */
 const lastHolidayTimestamp = Math.max(
     parseInt (holidays[0].date),
@@ -146,7 +146,7 @@ const lastMonth = new Date (lastHolidayTimestamp).getMonth() +1
 console.log('')
 
 /**
- * to have two charecter date and month, they have to be passed to string first
+ * to have two charecter date and month using padStar, they have to be passed to string first
  */
 const firstDayString = firstDay.toString()
 const firstMonthString = firstMonth.toString()
