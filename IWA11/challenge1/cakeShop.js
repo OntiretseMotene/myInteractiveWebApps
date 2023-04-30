@@ -9,18 +9,18 @@ const order1 = document.querySelector('[data-key="order1"]'), //variable names a
 const order2 = document.querySelector('[data-key="order2"]'),
     order2Biscuits = order2.querySelector('.biscuits .count'),
     order2Donuts = order2.querySelector('.donuts .count'),
-    order2Pancakes = order2.querySelector('.pancakes ..count'),
+    order2Pancakes = order2.querySelector('.pancakes .count'),
     order2Status = order2.querySelector('.status dd');
 
  const order3 = document.querySelector('[data-key="order3"]'),
     order3Biscuits = order3.querySelector('.biscuits .count'),
     order3Donuts = order3.querySelector('.donuts .count'),
     order3Pancakes = order3.querySelector('.pancakes .count'),
-    Order3Status = order3.querySelector('.status dd');
+    order3Status = order3.querySelector('.status dd');
 
 order1Biscuits.textContent = order1.getAttribute('data-biscuits');
 order1Donuts.textContent = order1.getAttribute('data-donuts');
-oder1Pancakes.textContent = order1.getAttribute('data-pancakes');
+order1Pancakes.textContent = order1.getAttribute('data-pancakes');
 order1Status.textContent = order1.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
 
 order2Biscuits.textContent = order2.getAttribute('data-biscuits');
@@ -31,4 +31,4 @@ order2Status.textContent = order2.getAttribute('data-delivered') === 'true' ? 'D
 order3Biscuits.textContent = order3.getAttribute('data-biscuits');
 order3Donuts.textContent = order3.getAttribute('data-donuts');
 order3Pancakes.textContent = order3.getAttribute('data-pancakes');
-prder3Status.textContent = order3.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
+order3Status.textContent = order3.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
