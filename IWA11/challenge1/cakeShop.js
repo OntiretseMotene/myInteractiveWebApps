@@ -1,32 +1,34 @@
-const 1-root = document(order1),
-const 1-biscuits: document(biscuits),
-const 1-donuts: document(donuts),
-const 1-pancakes: document(pancakes),
-const 1-status: document(status)
+// Query selector lets you find the first element that matches the CSS selector/HTML elements you specify.
 
-const 2-root = document(order2),
-const 2-biscuits: document(biscuits),
-const 2-donuts: document(donuts),
-const 2-pancakes: document(pancakes),
-const 2-status: document(status)
+const order1 = document.querySelector('[data-key="order1"]'), //variable names are invalid
+    order1Biscuits = order1.querySelector ('.biscuits .count'),
+    order1Donuts = order1.querySelector('.donuts .count'),
+    order1Pancakes = order1.querySelector('.pancakes .count'),
+    order1Status = order1.querySelector('.status dd');
 
-const 3-root = document(order3),
-const 3-biscuits: document(biscuits),
-const 3-donuts: document(donuts),
-const 3-pancakes: document(pancakes),
-const 3-status: document(status)
+const order2 = document.querySelector('[data-key="order2"]'),
+    order2Biscuits = order2.querySelector('.biscuits .count'),
+    order2Donuts = order2.querySelector('.donuts .count'),
+    order2Pancakes = order2.querySelector('.pancakes ..count'),
+    order2Status = order2.querySelector('.status dd');
 
-1-biscuits= 1-root.biscuits,
-1-donuts = 1-root.donuts,
-1-pancakes = 1-root.pancakes,
-1-status = 1-root.status ? Delivered : Pending
+ const order3 = document.querySelector('[data-key="order3"]'),
+    order3Biscuits = order3.querySelector('.biscuits .count'),
+    order3Donuts = order3.querySelector('.donuts .count'),
+    order3Pancakes = order3.querySelector('.pancakes .count'),
+    Order3Status = order3.querySelector('.status dd');
 
-2-biscuits= 2-root.biscuits,
-2-donuts = 2-root.donuts,
-2-pancakes = 2-root.pancakes,
-2-status = 2-root.status ? Delivered : Pending
+order1Biscuits.textContent = order1.getAttribute('data-biscuits');
+order1Donuts.textContent = order1.getAttribute('data-donuts');
+oder1Pancakes.textContent = order1.getAttribute('data-pancakes');
+order1Status.textContent = order1.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
 
-3-biscuits= 3-root.biscuits,
-3-donuts = 3-root.donuts,
-3-pancakes = 3-root.pancakes,
-3-status = 3-root.status ? Delivered : Pending
+order2Biscuits.textContent = order2.getAttribute('data-biscuits');
+order2Donuts.textContent = order2.getAttribute('data-donuts');
+order2Pancakes.textContent = order2.getAttribute('data-pancakes');
+order2Status.textContent = order2.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
+
+order3Biscuits.textContent = order3.getAttribute('data-biscuits');
+order3Donuts.textContent = order3.getAttribute('data-donuts');
+order3Pancakes.textContent = order3.getAttribute('data-pancakes');
+prder3Status.textContent = order3.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
