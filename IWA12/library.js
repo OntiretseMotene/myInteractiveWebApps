@@ -26,7 +26,7 @@ const STATUS_MAP = {
 }
 
 // Edit below line 
-
+/*
 function setStatusProperties(bookId, status) {
     const book = document.querySelector(`#${bookId}`);
     const statusElement = book.querySelector('.status');
@@ -42,9 +42,9 @@ function setStatusProperties(bookId, status) {
     reserveButton.style.filter = "grayscale(100%)";
     checkoutButton.style.filter = "grayscale(100%)";
     checkinButton.style.filter = "grayscale(100%)";
-};
+};*/
 
-/*
+
 
 const book1 = document.querySelector('#book1');
 const book2 = document.querySelector('#book2');
@@ -65,7 +65,7 @@ const checkout3 = book3.querySelector('.checkout');
 const checkin3 = book3.querySelector('.checkin');
 const status3 = book3.querySelector('.status');
 
-function setStatusProperties(book, reserve, checkout, checkin, status) {
+function setStatusProperties(_book, reserve, checkout, checkin, status) {
     const bookStatus = status.textContent.tolowerCase();
 
 
@@ -86,7 +86,7 @@ setStatusProperties(book1, reserve1, checkout1, checkin1, status1);
 setStatusProperties(book2, reserve2, checkout2, checkin2, status2);
 setStatusProperties(book3, reserve3, checkout3, checkin3, status3);
 
-*/
+
 
 /**status = selector(status)
  
