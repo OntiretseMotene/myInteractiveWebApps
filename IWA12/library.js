@@ -66,7 +66,7 @@ checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 
 //Book 1 object
 
-const Book1 = {
+const book1 = {
     status:  document.querySelector('#book1.status'),
     reserve: document.querySelector('#book1.reserve'),
     checkout: document.querySelector('#book1.checkout'),
@@ -80,7 +80,7 @@ const book2 = {
     status:  document.querySelector('#book2.status'),
     reserve: document.querySelector('#book2.reserve'),
     checkout: document.querySelector('#book2.checkout'),
-    checkin: document.querySelector('#book2checkin'),
+    checkin: document.querySelector('#book2.checkin'),
 };
 
 //Book 3 object
@@ -97,20 +97,20 @@ book1.reserve = STATUS_MAP.overdue.canReserve ? book1.reserve.enabled = true: bo
 book1.checkout = STATUS_MAP.overdue.canCheckout ? book1.checkout.enabled = true: book1.checkout.disabled = true
 book1.checkin = STATUS_MAP.overdue.canCheckIn ? book1.checkin.enabled = true: book1.checkout.disabled = true
 
-book1.checkin.status.style.color = ''
+book1.checkin.status.style.color = '';
 book1.status.style.color = STATUS_MAP.overdue.color;
 
 book2.reserve = STATUS_MAP.reserved.canReserve ? book2.reserve.enabled = true : book2.reserve.disabled = true
 book2.checkout = STATUS_MAP.reserved.canCheckout ? book2.checkout.enabled = true : book2.checkout.disabled = true
 book2.checkin = STATUS_MAP.reserved.canCheckIn ? book2.checkin.enabled = true : book2.checkin.disabled = true
 
-book2.checkin.status.style.color = ''
+book2.checkin.status.style.color = '';
 book2.status.style.color = STATUS_MAP.reserved.color;
 
 
 book3.reserve = STATUS_MAP.shelf.canReserve ? book3.reserve.enabled = true : book3.reserve.disabled = true
 book3.checkout = STATUS_MAP.shelf.canCheckout ? book3.checkout.enabled = true : book3.checkout.disabled = true
-book3.checkin = STATUS_MAP.shelf.canCheckIn ? book3.checkin.enabled = true : checkin.disabled = true
+book3.checkin = STATUS_MAP.shelf.canCheckIn ? book3.checkin.enabled = true : book3.checkin.disabled = true
 
-book3.checkin.status.style.color = ''
+book3.checkin.status.style.color = '';
 book3.status.style.color = STATUS_MAP.shelf.color;
