@@ -25,71 +25,10 @@ const STATUS_MAP = {
     }
 }
 
-// Edit below line 
+// Edit below line
+
 /*
-function setStatusProperties(bookId, status) {
-    const book = document.querySelector(`#${bookId}`);
-    const statusElement = book.querySelector('.status');
-    const reserveButton = book.querySelector('.reserve');
-    const checkoutButton = book.querySelector('.checkout');
-    const checkinButton = book.querySelector('checkin');
-
-    statusElement.style.color = 
-    reserveButton.diabled = !STATUS_MAP[status].canReserve;
-    checkoutButton.disabled = !STATUS_MAP[status].canCheckout;
-    checkinButton.disabled = !STATUS_MAP[status].canCheckin;
-
-    reserveButton.style.filter = "grayscale(100%)";
-    checkoutButton.style.filter = "grayscale(100%)";
-    checkinButton.style.filter = "grayscale(100%)";
-};*/
-
-
-
-const book1 = document.querySelector('#book1');
-const book2 = document.querySelector('#book2');
-const book3 = document.querySelector('#book3');
-
-const reserve1 = book1.querySelector('.reserve');
-const checkout1 = book1.querySelector('.checkout');
-const checkin1 = book1.querySelector('.checkin');
-const status1 = book1.querySelector('.status');
-
-const reserve2 = book2.querySelector('.reserve');
-const checkout2 = book2.querySelector('.checkout');
-const checkin2 = book2.querySelector('.checkin');
-const status2 = book2.querySelector('.status');
-
-const reserve3 = book3.querySelector('.reserve');
-const checkout3 = book3.querySelector('.checkout');
-const checkin3 = book3.querySelector('.checkin');
-const status3 = book3.querySelector('.status');
-
-function setStatusProperties(_book, reserve, checkout, checkin, status) {
-    const bookStatus = status.textContent.tolowerCase();
-
-
-    status.style.color = !STATUS_MAP[bookStatus].color
-
-
-    reserve.disabled = !STATUS_MAP[bookStatus].canReserve;
-    checkout.disabled = !STATUS_MAP[bookStatus].canCheckOut;
-    checkin.disabled = !STATUS_MAP[bookStatus].canCheckIn;
-    if (!checkin.disabled) {
-        checkin.style.color = '';
-    
-    }
-
-};
-
-setStatusProperties(book1, reserve1, checkout1, checkin1, status1);
-setStatusProperties(book2, reserve2, checkout2, checkin2, status2);
-setStatusProperties(book3, reserve3, checkout3, checkin3, status3);
-
-
-
-/**status = selector(status)
- 
+status = selector(status)
 reserve = selector(reserve)
 checkout = selector(checkout)
 checkin = selector(checkin)
@@ -122,3 +61,56 @@ reserve.2 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
 checkout.2 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
 checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 */
+
+
+
+//Book 1 object
+
+const Book1 = {
+    status:  document.querySelector('#book1.status'),
+    reserve: document.querySelector('#book1.reserve'),
+    checkout: document.querySelector('#book1.checkout'),
+    checkin: document.querySelector('#book1.checkin'),
+
+};
+
+//Book 2 object 
+
+const book2 = {
+    status:  document.querySelector('#book2.status'),
+    reserve: document.querySelector('#book2.reserve'),
+    checkout: document.querySelector('#book2.checkout'),
+    checkin: document.querySelector('#book2checkin'),
+};
+
+//Book 3 object
+
+const book3 = {
+    status: document.querySelector('#book3.status'),
+    reserve: document.querySelector('#book3.reserve'),
+    checkout: document.querySelector('#book3.checkout'),
+    checkin: document.querySelector('#book3.checkin'),
+};
+
+
+book1.reserve = STATUS_MAP.overdue.canReserve ? book1.reserve.enabled = true: book1.reserve.disabled = true
+book1.checkout = STATUS_MAP.overdue.canCheckout ? book1.checkout.enabled = true: book1.checkout.disabled = true
+book1.checkin = STATUS_MAP.overdue.canCheckIn ? book1.checkin.enabled = true: book1.checkout.disabled = true
+
+book1.checkin.status.style.color = ''
+book1.status.style.color = STATUS_MAP.overdue.color;
+
+book2.reserve = STATUS_MAP.reserved.canReserve ? book2.reserve.enabled = true : book2.reserve.disabled = true
+book2.checkout = STATUS_MAP.reserved.canCheckout ? book2.checkout.enabled = true : book2.checkout.disabled = true
+book2.checkin = STATUS_MAP.reserved.canCheckIn ? book2.checkin.enabled = true : book2.checkin.disabled = true
+
+book2.checkin.status.style.color = ''
+book2.status.style.color = STATUS_MAP.reserved.color;
+
+
+book3.reserve = STATUS_MAP.shelf.canReserve ? book3.reserve.enabled = true : book3.reserve.disabled = true
+book3.checkout = STATUS_MAP.shelf.canCheckout ? book3.checkout.enabled = true : book3.checkout.disabled = true
+book3.checkin = STATUS_MAP.shelf.canCheckIn ? book3.checkin.enabled = true : checkin.disabled = true
+
+book3.checkin.status.style.color = ''
+book3.status.style.color = STATUS_MAP.shelf.color;

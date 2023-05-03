@@ -1,6 +1,6 @@
 // Query selector lets you find the first element that matches the CSS selector/HTML elements you specify.
 
-const order1 = document.querySelector('[data-key="order1"]'), //variable names are invalid
+const order1 = document.querySelector('[data-key="order1"]'),   //variable names are invalid
     order1Biscuits = order1.querySelector ('.biscuits .count'),
     order1Donuts = order1.querySelector('.donuts .count'),
     order1Pancakes = order1.querySelector('.pancakes .count'),
