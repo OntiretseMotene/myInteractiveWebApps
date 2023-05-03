@@ -70,7 +70,7 @@ const book1 = {
     status: document.querySelector('#book1 .status'),
     reserve: document.querySelector('#book1 .reserve'),
     checkout: document.querySelector('#book1 .checkout'),
-    checkIn: document.querySelector('#book1 .checkIn'),
+    checkin: document.querySelector('#book1 .checkin'),
 
 };
 
@@ -80,7 +80,7 @@ const book2 = {
     status: document.querySelector('#book2 .status'),
     reserve: document.querySelector('#book2 .reserve'),
     checkout: document.querySelector('#book2 .checkout'),
-    checkIn: document.querySelector('#book2 .checkIn'),
+    checkin: document.querySelector('#book2 .checkin'),
 };
 
 //Book 3 object
@@ -89,33 +89,36 @@ const book3 = {
     status: document.querySelector('#book3 .status'),
     reserve: document.querySelector('#book3 .reserve'),
     checkout: document.querySelector('#book3 .checkout'),
-    checkIn: document.querySelector('#book3 .checkIn'),
+    checkin: document.querySelector('#book3 .checkin'),
 };
 
 
 //
 
-book1.reserve = STATUS_MAP.overdue.canReserve ? book1.reserve.enabled = true : book1.reserve.disabled = true
-book1.checkout = STATUS_MAP.overdue.canCheckout ? book1.checkout.enabled = true : book1.checkout.disabled = true
-book1.checkIn = STATUS_MAP.overdue.canCheckIn ? book1.checkIn.enabled = true : book1.checkIn.disabled = true
-
-book1.checkIn.style.color = '';
+book1.checkin.style.color = '';
 book1.status.style.color = STATUS_MAP.overdue.color;
 
+book1.reserve = STATUS_MAP.overdue.canReserve ? book1.reserve.enabled = true : book1.reserve.disabled = true
+book1.checkout = STATUS_MAP.overdue.canCheckout ? book1.checkout.enabled = true : book1.checkout.disabled = true
+book1.checkin = STATUS_MAP.overdue.canCheckIn ? book1.checkin.enabled = true : book1.checkin.disabled = true
+
 //
+
+book2.checkin.style.color = '';
+book2.status.style.color = STATUS_MAP.reserved.color;
 
 book2.reserve = STATUS_MAP.reserved.canReserve ? book2.reserve.enabled = true : book2.reserve.disabled = true
 book2.checkout = STATUS_MAP.reserved.canCheckout ? book2.checkout.enabled = true : book2.checkout.disabled = true
-book2.checkIn = STATUS_MAP.reserved.canCheckIn ? book2.checkIn.enabled = true : book2.checkIn.disabled = true
+book2.checkin = STATUS_MAP.reserved.canCheckIn ? book2.checkin.enabled = true : book2.checkin.disabled = true
 
-book2.checkIn.style.color = '';
-book2.status.style.color = STATUS_MAP.reserved.color;
 
 //
 
+book3.checkin.style.color = '';
+book3.status.style.color = STATUS_MAP.shelf.color; 
+
 book3.reserve = STATUS_MAP.shelf.canReserve ? book3.reserve.enabled = true : book3.reserve.disabled = true
 book3.checkout = STATUS_MAP.shelf.canCheckout ? book3.checkout.enabled = true : book3.checkout.disabled = true
-book3.checkIn = STATUS_MAP.shelf.canCheckIn ? book3.checkIn.enabled = true : book3.checkIn.disabled = true
+book3.checkin = STATUS_MAP.shelf.canCheckIn ? book3.checkin.enabled = true : book3.checkin.disabled = true
 
-book3.checkIn.style.color = '';
-book3.status.style.color = STATUS_MAP.shelf.color; 
+
