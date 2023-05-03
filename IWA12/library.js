@@ -67,29 +67,29 @@ checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 //Book 1 object
 
 const book1 = {
-    status:  document.querySelector('#book1.status'),
-    reserve: document.querySelector('#book1.reserve'),
-    checkout: document.querySelector('#book1.checkout'),
-    checkin: document.querySelector('#book1.checkin'),
+    status:  document.querySelector('#book1 .status'),
+    reserve: document.querySelector('#book1 .reserve'),
+    checkout: document.querySelector('#book1 .checkout'),
+    checkin: document.querySelector('#book1 .checkin'),
 
 };
 
 //Book 2 object 
 
 const book2 = {
-    status:  document.querySelector('#book2.status'),
-    reserve: document.querySelector('#book2.reserve'),
-    checkout: document.querySelector('#book2.checkout'),
-    checkin: document.querySelector('#book2.checkin'),
+    status:  document.querySelector('#book2 .status'),
+    reserve: document.querySelector('#book2 .reserve'),
+    checkout: document.querySelector('#book2 .checkout'),
+    checkin: document.querySelector('#book2 .checkin'),
 };
 
 //Book 3 object
 
 const book3 = {
-    status: document.querySelector('#book3.status'),
-    reserve: document.querySelector('#book3.reserve'),
-    checkout: document.querySelector('#book3.checkout'),
-    checkin: document.querySelector('#book3.checkin'),
+    status: document.querySelector('#book3 .status'),
+    reserve: document.querySelector('#book3 .reserve'),
+    checkout: document.querySelector('#book3 .checkout'),
+    checkin: document.querySelector('#book3 .checkin'),
 };
 
 
