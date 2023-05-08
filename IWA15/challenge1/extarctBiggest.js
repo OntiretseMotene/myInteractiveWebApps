@@ -36,12 +36,12 @@ const third = data.lists[2][1];
  */
 const extractBiggest = () => {
 
-	if (first.length > 0 && (second.length-1 === 0 || first[first.length-1] >= second[second.length-1]) &&
-	 (third.length-1 === 0 || first[first.length-1] >= third[third.length-1])) {
+	if (first.length > 0 && (second.length === 0 || first[first.length-1] > second[second.length-1]) &&
+	 (third.length === 0 || first[first.length-1] > third[third.length-1])) {
 		return first.pop();
 	}
 
-	if (second.length > 0 && (third.length-1 === 0 || second[second.length-1] >= third[third.length-1])) {
+	if (second.length > 0 && (third.length === 0 || second[second.length-1] > third[third.length-1])) {
 		return second.pop();
 	} 
 	
@@ -50,7 +50,7 @@ const extractBiggest = () => {
     }
 
 	
-};
+}
 
 
 const result = []
