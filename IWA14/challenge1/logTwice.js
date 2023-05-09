@@ -1,12 +1,12 @@
 //I defined 3 variables using const keyword.
 
-firstName = 'John';
-age = 35;
-hobby = 'Coding';
+const firstName = 'John';
+const age = 35;
+const hobby = 'Coding';
 
 /**
- * Then I defined a function called "logTwice" that takes the "aboutUser" argument.
- * It logs this argument twice using the console.log() method.
+ * I defined a function called "logTwice" that takes the "aboutUser" argument.
+ * logTwice function logs this argument (aboutUser) twice using the console.log() method.
  */
  
 const logTwice = (aboutUser) => {
