@@ -101,7 +101,7 @@ export const html = {
         add: document.querySelector('[data-add]'),
         order: document.querySelector('[data-order]'),
     }
-}
+}i
 
 for (const columnName of COLUMNS) {
     html.columns[columnName] = document.querySelector(`[data-column="${columnName}"]`)
